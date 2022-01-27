@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import Header from '../Share/Header/Header';
 
-const AddExperience = () => {
+const AddBlog = () => {
     const [addBlog, setAddBlog] = useState({});
     const [confirm, setConfirm] = useState(false);
     // const { user, registerUser, isLoading, authError } = useAuth();
-    const status = 'pending';
+    const status = 'accepted';
     const handleOnBlur = (e) => {
         const field = e.target.name;
         const value = e.target.value;
@@ -19,7 +18,7 @@ const AddExperience = () => {
             ...addBlog,
             status
         }
-        fetch('https://pacific-plateau-84630.herokuapp.com/blogs', {
+        fetch('http://localhost:5000/blogs', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -35,9 +34,7 @@ const AddExperience = () => {
             })
     }
     return (
-        <>
-            <Header></Header>
-            <div className="container">
+        <div className="container">
                 <div className="row row-cols-1 row-cols-sm-2">
                     <div className="col">
                         <h3 className='mt-5'>Please Provide<span className='text-danger'> Information </span>For Add <span className='text-danger'>Blogs</span></h3>
@@ -79,7 +76,7 @@ const AddExperience = () => {
                             </div>
                             {
                                 confirm && <div class="alert alert-success" role="alert">
-                                    Add Blog For Admin Review
+                                    Add Blog Successfully
                                 </div>
                             }
                         </form>
@@ -90,8 +87,7 @@ const AddExperience = () => {
                     </div>
                 </div>
             </div>
-        </>
     );
 };
 
-export default AddExperience;
+export default AddBlog;

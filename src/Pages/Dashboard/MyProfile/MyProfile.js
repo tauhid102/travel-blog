@@ -5,8 +5,8 @@ import useAuth from '../../hooks/useAuth';
 const MyProfile = () => {
     const { user,admin } = useAuth();
     return (
-        <div className=''>
-        <div className='w-25 mx-auto'>
+        <div className='container'>
+        <div className='w-25'>
             <Card style={{ width: '18rem' }} className='bg-dark mt-5 '>
                 <Card.Img variant="top" className='rounded-circle' width={200} src={user.photoURL} />
                 <Card.Body className='text-white'>

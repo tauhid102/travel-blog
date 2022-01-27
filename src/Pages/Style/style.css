@@ -30,6 +30,6 @@
     border-radius: 5px;
 }
 .pagination .selected{
-    background-color: rgb(75, 75, 180);
+    background-color: rgb(0, 0, 0);
     color: white;
 }

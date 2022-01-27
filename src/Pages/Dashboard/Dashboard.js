@@ -5,6 +5,7 @@ import { useRouteMatch } from 'react-router-dom/cjs/react-router-dom.min';
 import useAuth from '../hooks/useAuth';
 import AdminRoute from '../Login/AdminRoute/AdminRoute';
 import PrivateRoute from '../Login/PrivateRoute/PrivateRoute';
+import AddBlog from './AddBlog/AddBlog';
 import MakeAdmin from './MakeAdmin/MakeAdmin';
 import MyBlog from './MyBlog/MyBlog';
 import MyProfile from './MyProfile/MyProfile';
@@ -55,6 +56,7 @@ const Dashboard = () => {
                                             admin && <div>
                                                 
                                                 <Nav.Link className='border-bottom' as={Link} to={`${url}/myblog`}>My Blog</Nav.Link>
+                                                <Nav.Link className='border-bottom' as={Link} to={`${url}/addblog`}><i class="fas fa-unlock-alt"></i> Add Blog</Nav.Link>
                                                 <Nav.Link className='border-bottom' as={Link} to={`${url}/makeadmin`}><i class="fas fa-unlock-alt"></i> Make Admin</Nav.Link>
                                             </div>
                                         }
@@ -79,6 +81,9 @@ const Dashboard = () => {
                             </PrivateRoute>
                             <AdminRoute path={`${url}/myblog`}>
                                 <MyBlog></MyBlog>
+                            </AdminRoute>
+                            <AdminRoute path={`${url}/addblog`}>
+                                <AddBlog></AddBlog>
                             </AdminRoute>
                             <AdminRoute path={`${url}/makeadmin`}>
                                 <MakeAdmin></MakeAdmin>
