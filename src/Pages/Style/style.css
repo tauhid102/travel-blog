@@ -1,0 +1,35 @@
+.user-image{
+    width: 40px;
+    border-radius: 50%;
+}
+.logo{
+    width: 40px;
+}
+#basic-nav-dropdown{
+    padding: 0;
+}
+.icons{
+    margin-bottom: 0px;
+}
+.social i{
+    font-size: 50px;
+    margin-left: 10px;
+    transition: 1s;
+}
+.social i:hover{
+    color: rgb(8, 235, 76);
+    cursor: pointer;
+}
+.pagination{
+    margin: 30px;
+}
+.pagination button{
+    padding: 0 15px;
+    margin-right: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.pagination .selected{
+    background-color: rgb(75, 75, 180);
+    color: white;
+}
