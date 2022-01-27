@@ -6,7 +6,7 @@ const MyBlog = () => {
     const [blogs, setBlogs] = useState([]);
     const [accepted, setAccepted] = useState(true);
     useEffect(() => {
-        fetch('http://localhost:5000/blogs')
+        fetch('https://pacific-plateau-84630.herokuapp.com/blogs')
             .then(res => res.json())
             .then(data => setBlogs(data.blogs))
     }, [accepted]);
@@ -14,7 +14,7 @@ const MyBlog = () => {
     const handleCancenBlog = (id) => {
         const proceed = window.confirm('Are you sure, you want to delete?');
         if (proceed) {
-            const url = `http://localhost:5000/blogs/${id}`;
+            const url = `https://pacific-plateau-84630.herokuapp.com/blogs/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
@@ -32,7 +32,7 @@ const MyBlog = () => {
         const ids = { id };
         const proceed = window.confirm('Are you sure, you want to accepted?');
         if (proceed) {
-            const url = `http://localhost:5000/blogs/${id}`;
+            const url = `https://pacific-plateau-84630.herokuapp.com/blogs/${id}`;
             fetch(url, {
                 method: 'PUT',
                 headers: {

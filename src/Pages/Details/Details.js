@@ -7,7 +7,7 @@ const Details = () => {
     const [details, setDetails] = useState([]);
 
     useEffect(() => {
-        const url = `http://localhost:5000/blogs/${detailsId}`;
+        const url = `https://pacific-plateau-84630.herokuapp.com/blogs/${detailsId}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setDetails(data));
