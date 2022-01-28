@@ -18,7 +18,7 @@ const AddBlog = () => {
             ...addBlog,
             status
         }
-        fetch('http://localhost:5000/blogs', {
+        fetch('https://pacific-plateau-84630.herokuapp.com/blogs', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

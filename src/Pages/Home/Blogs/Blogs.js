@@ -9,7 +9,7 @@ const Blogs = () => {
     const [page, setPage] = useState(0);
     // const size=10;
     useEffect(() => {
-        fetch(`http://localhost:5000/blogs?page=${page}`)
+        fetch(`https://pacific-plateau-84630.herokuapp.com/blogs?page=${page}`)
             .then(res => res.json())
             .then(data => {
                 setBlogs(data.blogs);
